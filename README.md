@@ -22,12 +22,13 @@ Gerador de PDF: ReportLab
 Navegação: Webbrowser (Para visualização imediata de relatórios)
 
 📂 Estrutura do Projeto
+´´´
 CRUD/
 ├── Main.py          # Ponto de entrada e interface principal
 ├── Utils.py         # Lógica de negócio, classes do banco e funções CRUD
 ├── Report.py        # Módulo especializado em geração de PDFs
 └── clientes.db      # Banco de dados SQLite (gerado automaticamente)
-
+´´´
 ⚙️ Como Executar
 1. Clone o repositório:
 	git clone https://github.com/seu-usuario/nome-do-repo.git
