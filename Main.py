@@ -4,12 +4,13 @@ from sqlalchemy import create_engine, Column, String, Integer, Boolean, ForeignK
 from sqlalchemy.orm import sessionmaker, declarative_base
 from Utils import Funcs, Base
 from Report import Relatórios
+import os
 
 
 class Application(Funcs, Relatórios):
     def __init__(self): #cira a função de inicialização da janela
         self.jan = tk.Tk() #gera uma equivalencia lembrando o programa que jan se refere a jenela
-        self.db = create_engine("sqlite:///Curso Python/Python casa/Praticas/CRUD/clientes.db")
+        self.db = create_engine(f"sqlite:///{os.path.dirname(os.path.abspath(__file__))}/clientes.db")
         Session = sessionmaker(bind = self.db)
         self.session = Session()
         Base.metadata.create_all(bind = self.db)
